@@ -1,0 +1,25 @@
+/* Basic */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #fff;
+}
+
+.base-custom {
+    background-color: #fc5050;
+}
+
+/* End - Basic */
+
+/* Main */
+.card-custom {
+    border-radius: 1rem;
+}
