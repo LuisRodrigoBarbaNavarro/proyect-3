@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "name": "Rosa Eterna",
+      "description": "Una rosa que nunca se marchita, simboliza amor eterno y pasión.",
+      "price": 19.99,
+      "imageUrl": "https://th.bing.com/th/id/R.c655aa147f1c854fd3aa9af11bf2dffe?rik=zEn7ULd%2bIjFDmQ&riu=http%3a%2f%2fwww.prettipleaseblog.com%2fwp-content%2fuploads%2f2016%2f03%2fflowerfields3.jpg&ehk=umfW7bP7YdL0bL11Pu6dOqa33Gif4VL77tOGP6wb5Uk%3d&risl=1&pid=ImgRaw&r=0"
+    },
+    {
+      "id": 2,
+      "name": "Lirio Lunar",
+      "description": "Un lirio blanco como la luna, representa pureza y serenidad.",
+      "price": 29.99,
+      "imageUrl": "https://images.rove.me/w_1920,q_85/dxvwumrjm9x7uzz3hl1l/san-diego-the-flower-fields-at-carlsbad-ranch.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Tulipán Brillante",
+      "description": "Tulipanes de colores brillantes que añaden alegría a cualquier jardín.",
+      "price": 9.99,
+      "imageUrl": "https://wallpapercave.com/wp/wp4488484.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Margarita Encantada",
+      "description": "Margaritas con un toque mágico, inspiran alegría y optimismo.",
+      "price": 49.99,
+      "imageUrl": "https://th.bing.com/th/id/OIP.7mY0O7bsdKt9_vObcy29xgHaE4?pid=ImgDet&rs=1"
+    },
+    {
+      "id": 5,
+      "name": "Orquídea Mística",
+      "description": "Orquídeas exóticas que evocan misterio y elegancia.",
+      "price": 39.99,
+      "imageUrl": "https://livewallpaperhd.com/wp-content/uploads/2018/03/Spring-Nature-For-Windows.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Girasol Radiante",
+      "description": "Girasoles amarillos que simbolizan felicidad y vitalidad.",
+      "price": 59.99,
+      "imageUrl": "https://d2uqfpnktc64mn.cloudfront.net/uploads/post/image/000/001/359/Image-by-Graham-Duerden.-West-Woods-Bluebells.-Wiltshire_-England..jpg"
+    }
+  ]
+  
