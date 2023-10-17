@@ -75,7 +75,11 @@ document.addEventListener("click", function (e) {
   const calculator = document.getElementById("collapseCalculator");
   const calculatorButton = document.querySelector(".btn-calculator");
 
-  if (calculator && !calculator.contains(e.target) && e.target !== calculatorButton) {
+  if (
+    calculator &&
+    !calculator.contains(e.target) &&
+    e.target !== calculatorButton
+  ) {
     calculator.classList.remove("show");
     content.classList.remove("blur");
   }
@@ -94,11 +98,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // Obtiene el contenedor donde se mostrará el catálogo y el resumen de compra.
   const productListContainer = document.getElementById("productList");
 
-  // Genera las tarjetas de productos en el catálogo y las agrega al contenedor.
-  productList.forEach((product) => {
-    const card = document.createElement("div");
-    card.classList.add("col-md-6", "mb-4");
-    card.innerHTML = `
+  if (productList && productList.length > 0) {
+    // Genera las tarjetas de productos en el catálogo y las agrega al contenedor.
+    productList.forEach((product) => {
+      const card = document.createElement("div");
+      card.classList.add("col-md-6", "mb-4");
+      card.innerHTML = `
             <div class="card card-custom">
                 <img src="${product.imageUrl}" class="card-img-top card-img-custom" alt="Producto ${product.id}">
                 <div class="card-body text-center" style="background-color: #80C2AF; color: white;">
@@ -119,20 +124,28 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
             </div>
         `;
-    productListContainer.appendChild(card);
+      productListContainer.appendChild(card);
 
-    // Obtiene la cantidad de productos a agregar al cart y manda llamar la función para agregar el producto al cart.
-    const btnAdd = card.querySelector(".add-to-cart");
-    btnAdd.addEventListener("click", function () {
-      const quantity = parseInt(
-        document.getElementById(`inputQuantity${product.id}`).value
-      );
+      // Obtiene la cantidad de productos a agregar al cart y manda llamar la función para agregar el producto al cart.
+      const btnAdd = card.querySelector(".add-to-cart");
+      btnAdd.addEventListener("click", function () {
+        const quantity = parseInt(
+          document.getElementById(`inputQuantity${product.id}`).value
+        );
 
-      if (quantity > 0) {
-        addProduct(product, quantity);
-      }
+        if (quantity > 0) {
+          addProduct(product, quantity);
+        }
+      });
     });
-  });
+  } else {
+    productListContainer.innerHTML = `
+            <div class="col-md-12 text-center">
+                <img src="../img/flower-error-2.svg" alt="Empty cart" width=60>
+                <h3 class="mt-3" style="color: #80C2AF;">No hay productos disponibles.</h3> 
+            </div>
+        `;
+  }
 
   // Almacena en el arreglo los productos agregados al cart y actualiza la cantidad de productos en el carrito en caso de que se agregue más de uno del mismo producto.
   function addProduct(product, quantity) {
