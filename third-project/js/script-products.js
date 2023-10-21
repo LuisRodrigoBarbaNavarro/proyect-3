@@ -43,6 +43,16 @@ function logout() {
 // Datos iniciales de productos (esto podría ser reemplazado por una base de datos real)
 let products = [];
 
+// Evento para el campo de precio del producto para evitar valores negativos
+const productPrice = document.getElementById('product-price');
+productPrice.addEventListener('change', function(event) {
+  // Verificar si ingresas - (menos) en el campo de precio
+  if (productPrice.value < 0) {
+    alert('No se permiten valores negativos.');
+    productPrice.value = 1;
+  }
+});
+
 // Función para cargar los productos almacenados en el almacenamiento local
 function loadProductsFromLocalStorage() {
   const storedProducts = localStorage.getItem("products");
